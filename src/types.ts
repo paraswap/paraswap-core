@@ -59,5 +59,6 @@ export type OptimalRate = {
   maxUSDImpact?: number;
   maxImpactReached?: boolean;
   partner?: string;
+  partnerFee: number;
   hmac: string;
 };
