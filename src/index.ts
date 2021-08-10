@@ -11,4 +11,5 @@ export {
 
 export {
   SwapSide,
+  ContractMethod
 } from './constants';
