@@ -17,5 +17,6 @@ export enum ContractMethod {
   protectedSimpleSwap = 'protectedSimpleSwap',
   protectedSimpleBuy = 'protectedSimpleBuy',
   swapOnZeroXv2 = 'swapOnZeroXv2',
-  swapOnZeroXv4 = 'swapOnZeroXv4'
+  swapOnZeroXv4 = 'swapOnZeroXv4',
+  buy = 'buy' // TODO: remove this in future
 }
