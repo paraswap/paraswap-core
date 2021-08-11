@@ -8,6 +8,8 @@ export enum ContractMethod {
   buyOnUniswap = 'buyOnUniswap',
   swapOnUniswapFork = 'swapOnUniswapFork',
   buyOnUniswapFork = 'buyOnUniswapFork',
+  swapOnUniswapV2Fork = 'swapOnUniswapV2Fork',
+  buyOnUniswapV2Fork = 'buyOnUniswapV2Fork',
   simpleBuy = 'simplBuy',
   simpleSwap = 'simpleSwap',
   multiSwap = 'multiSwap',
