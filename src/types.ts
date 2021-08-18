@@ -13,9 +13,9 @@ export type OptimalRoute = {
 };
 
 export type OptimalSwap = {
-  src: Address;
+  srcToken: Address;
   srcDecimals: number;
-  dest: Address;
+  destToken: Address;
   destDecimals: number;
   swapExchanges: OptimalSwapExchange<any>[];
 };
