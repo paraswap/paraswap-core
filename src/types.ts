@@ -39,11 +39,11 @@ export type OptionalRate = {
 export type OptimalRate = {
   blockNumber: number;
   network: number;
-  src: Address;
+  srcToken: Address;
   srcDecimals: number;
   srcAmount: NumberAsString;
   srcUSD: NumberAsString;
-  dest: Address;
+  destToken: Address;
   destDecimals: number;
   destAmount: NumberAsString;
   destUSD: NumberAsString;
