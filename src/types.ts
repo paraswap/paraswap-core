@@ -35,7 +35,6 @@ export type OptionalRate = {
   destAmount: NumberAsString;
   unit?: NumberAsString;
   data?: any;
-  poolAddresses?: Array<Address>;
 };
 
 export type OptimalRate = {
