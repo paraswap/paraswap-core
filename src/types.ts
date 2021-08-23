@@ -13,9 +13,9 @@ export type OptimalRoute = {
 };
 
 export type OptimalSwap = {
-  src: Address;
+  srcToken: Address;
   srcDecimals: number;
-  dest: Address;
+  destToken: Address;
   destDecimals: number;
   swapExchanges: OptimalSwapExchange<any>[];
 };
@@ -41,11 +41,11 @@ export type OptionalRate = {
 export type OptimalRate = {
   blockNumber: number;
   network: number;
-  src: Address;
+  srcToken: Address;
   srcDecimals: number;
   srcAmount: NumberAsString;
   srcUSD: NumberAsString;
-  dest: Address;
+  destToken: Address;
   destDecimals: number;
   destAmount: NumberAsString;
   destUSD: NumberAsString;
