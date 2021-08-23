@@ -26,6 +26,7 @@ export type OptimalSwapExchange<T> = {
   destAmount: NumberAsString;
   percent: number;
   data?: T;
+  poolAddresses?: Array<Address>;
 };
 
 export type OptionalRate = {
