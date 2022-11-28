@@ -1,5 +1,5 @@
 {
-  "name": "paraswap-core",
+  "name": "@paraswap/core",
   "version": "1.0.2",
   "description": "Common library used between different paraswap packages",
   "main": "build/index.js",
