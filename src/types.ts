@@ -51,6 +51,7 @@ export type OptimalRate = {
   bestRoute: OptimalRoute[];
   gasCostUSD: NumberAsString;
   gasCost: NumberAsString;
+  gasCostL1Wei?: string; // L1 surcharge on optimism
   others?: OptionalRate[];
   side: SwapSide;
   contractMethod: string;
