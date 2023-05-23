@@ -30,7 +30,7 @@ export enum ContractMethod {
   directBalancerV2GivenOutSwap = "directBalancerV2GivenOutSwap",
 }
 
-export const DirectContractMethodsWithModel: ContractMethod[] = [
+export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
   ContractMethod.directUniV3Swap,
   ContractMethod.directUniV3Buy,
   ContractMethod.directCurveV1Swap,
@@ -48,4 +48,4 @@ export const DirectContractMethods: ContractMethod[] = [
   ContractMethod.buyOnUniswapV2Fork,
   ContractMethod.swapOnZeroXv2,
   ContractMethod.swapOnZeroXv4,
-].concat(DirectContractMethodsWithModel);
+].concat(DirectContractMethodsWithFeeModel);
