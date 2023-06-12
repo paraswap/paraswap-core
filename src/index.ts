@@ -6,10 +6,7 @@ export {
   OptimalSwap,
   OptimalSwapExchange,
   OptionalRate,
-  OptimalRate
-} from './types';
+  OptimalRate,
+} from "./types";
 
-export {
-  SwapSide,
-  ContractMethod
-} from './constants';
+export { SwapSide, ContractMethod, DirectContractMethods } from "./constants";
