@@ -15,5 +15,8 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
+  "publishConfig": {
+    "@paraswap:registry": "https://npm.pkg.github.com"
+  },
   "sideEffects": false
 }
