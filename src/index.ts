@@ -7,6 +7,6 @@ export {
   OptimalSwapExchange,
   OptionalRate,
   OptimalRate,
-} from "./types";
+} from './types';
 
-export { SwapSide, ContractMethodV5 as ContractMethod, DirectContractMethods } from "./constants";
+export { SwapSide, ContractMethod, ContractMethodV5, ContractMethodV6, DirectContractMethods } from './constants';
