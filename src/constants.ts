@@ -30,26 +30,6 @@ export enum ContractMethodV5 {
   directBalancerV2GivenOutSwap = 'directBalancerV2GivenOutSwap',
 }
 
-export const DirectContractMethodsWithFeeModel: ContractMethodV5[] = [
-  ContractMethodV5.directUniV3Swap,
-  ContractMethodV5.directUniV3Buy,
-  ContractMethodV5.directCurveV1Swap,
-  ContractMethodV5.directCurveV2Swap,
-  ContractMethodV5.directBalancerV2GivenInSwap,
-  ContractMethodV5.directBalancerV2GivenOutSwap,
-];
-
-export const DirectContractMethods: ContractMethodV5[] = [
-  ContractMethodV5.swapOnUniswap,
-  ContractMethodV5.buyOnUniswap,
-  ContractMethodV5.swapOnUniswapFork,
-  ContractMethodV5.buyOnUniswapFork,
-  ContractMethodV5.swapOnUniswapV2Fork,
-  ContractMethodV5.buyOnUniswapV2Fork,
-  ContractMethodV5.swapOnZeroXv2,
-  ContractMethodV5.swapOnZeroXv4,
-].concat(DirectContractMethodsWithFeeModel);
-
 export enum ContractMethodV6 {
   genericSwap = 'genericSwap',
 }
@@ -57,3 +37,26 @@ export enum ContractMethodV6 {
 export const ContractMethod = { ...ContractMethodV5, ...ContractMethodV6 };
 
 export type ContractMethod = ContractMethodV5 | ContractMethodV6;
+
+export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
+  ContractMethod.directUniV3Swap,
+  ContractMethod.directUniV3Buy,
+  ContractMethod.directCurveV1Swap,
+  ContractMethod.directCurveV2Swap,
+  ContractMethod.directBalancerV2GivenInSwap,
+  ContractMethod.directBalancerV2GivenOutSwap,
+];
+
+export const DirectContractMethods = (
+  [
+    ContractMethod.swapOnUniswap,
+    ContractMethod.buyOnUniswap,
+    ContractMethod.swapOnUniswapFork,
+    ContractMethod.buyOnUniswapFork,
+    ContractMethod.swapOnUniswapV2Fork,
+    ContractMethod.buyOnUniswapV2Fork,
+    ContractMethod.swapOnZeroXv2,
+    ContractMethod.swapOnZeroXv4,
+    // use "as ContractMethod[]" as long as DirectContractMethods doesn't have any methods from ContractMethodV6
+  ] as ContractMethod[]
+).concat(DirectContractMethodsWithFeeModel);
