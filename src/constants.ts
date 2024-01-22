@@ -32,14 +32,20 @@ export enum ContractMethod {
   // V6 direct methods
 
   // Uniswap
+  directUniV2SwapV6 = 'swapExactAmountInOnUniswapV2',
+  directUniV2BuyV6 = 'swapExactAmountOutOnUniswapV2',
   directUniV3SwapV6 = 'swapExactAmountInOnUniswapV3',
   directUniV3BuyV6 = 'swapExactAmountOutOnUniswapV3',
 
   // CurveV1
+  directCurveV1SwapV6 = 'swapExactAmountInOnCurveV1',
 
   // CurveV2
+  directCurveV2SwapV6 = 'swapExactAmountInOnCurveV2',
 
   // BalancerV2
+  directBalancerV2SwapV6 = 'swapExactAmountInOnBalancerV2',
+  directBalancerV2BuyV6 = 'swapExactAmountOutOnBalancerV2',
 }
 
 export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
@@ -49,8 +55,14 @@ export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
   ContractMethod.directCurveV2Swap,
   ContractMethod.directBalancerV2GivenInSwap,
   ContractMethod.directBalancerV2GivenOutSwap,
+  ContractMethod.directUniV2SwapV6,
+  ContractMethod.directUniV2BuyV6,
   ContractMethod.directUniV3SwapV6,
   ContractMethod.directUniV3BuyV6,
+  ContractMethod.directCurveV1SwapV6,
+  ContractMethod.directCurveV2SwapV6,
+  ContractMethod.directBalancerV2SwapV6,
+  ContractMethod.directBalancerV2BuyV6,
 ];
 
 export const DirectContractMethods: ContractMethod[] = [
