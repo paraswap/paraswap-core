@@ -31,7 +31,18 @@ export enum ContractMethodV5 {
 }
 
 export enum ContractMethodV6 {
-  genericSwap = 'genericSwap',
+  swapExactAmountIn = 'swapExactAmountIn',
+  swapExactAmountOut = 'swapExactAmountOut',
+  swapExactAmountInOnUniswapV2 = 'swapExactAmountInOnUniswapV2',
+  swapExactAmountOutOnUniswapV2 = 'swapExactAmountOutOnUniswapV2',
+  swapExactAmountInOnUniswapV3 = 'swapExactAmountInOnUniswapV3',
+  swapExactAmountOutOnUniswapV3 = 'swapExactAmountOutOnUniswapV3',
+  swapExactAmountInOnBalancerV2 = 'swapExactAmountInOnBalancerV2',
+  swapExactAmountOutOnBalancerV2 = 'swapExactAmountOutOnBalancerV2',
+  swapExactAmountInOnCurveV1 = 'swapExactAmountInOnCurveV1',
+  swapExactAmountInOnCurveV2 = 'swapExactAmountInOnCurveV2',
+  swapExactAmountInOutOnAugustusRFQTryBatchFill = 'swapExactAmountInOutOnAugustusRFQTryBatchFill',
+  swapExactAmountInOutOnMakerPSM = 'swapExactAmountInOutOnMakerPSM',
 }
 
 export const ContractMethod = { ...ContractMethodV5, ...ContractMethodV6 };
@@ -39,24 +50,35 @@ export const ContractMethod = { ...ContractMethodV5, ...ContractMethodV6 };
 export type ContractMethod = ContractMethodV5 | ContractMethodV6;
 
 export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
-  ContractMethod.directUniV3Swap,
-  ContractMethod.directUniV3Buy,
-  ContractMethod.directCurveV1Swap,
-  ContractMethod.directCurveV2Swap,
-  ContractMethod.directBalancerV2GivenInSwap,
-  ContractMethod.directBalancerV2GivenOutSwap,
+  ContractMethodV5.directUniV3Swap,
+  ContractMethodV5.directUniV3Buy,
+  ContractMethodV5.directCurveV1Swap,
+  ContractMethodV5.directCurveV2Swap,
+  ContractMethodV5.directBalancerV2GivenInSwap,
+  ContractMethodV5.directBalancerV2GivenOutSwap,
+
+  ContractMethodV6.swapExactAmountIn,
+  ContractMethodV6.swapExactAmountOut,
+  ContractMethodV6.swapExactAmountInOnUniswapV2,
+  ContractMethodV6.swapExactAmountOutOnUniswapV2,
+  ContractMethodV6.swapExactAmountInOnUniswapV3,
+  ContractMethodV6.swapExactAmountOutOnUniswapV3,
+  ContractMethodV6.swapExactAmountInOnBalancerV2,
+  ContractMethodV6.swapExactAmountOutOnBalancerV2,
+  ContractMethodV6.swapExactAmountInOnCurveV1,
+  ContractMethodV6.swapExactAmountInOnCurveV2,
 ];
 
-export const DirectContractMethods = (
-  [
-    ContractMethod.swapOnUniswap,
-    ContractMethod.buyOnUniswap,
-    ContractMethod.swapOnUniswapFork,
-    ContractMethod.buyOnUniswapFork,
-    ContractMethod.swapOnUniswapV2Fork,
-    ContractMethod.buyOnUniswapV2Fork,
-    ContractMethod.swapOnZeroXv2,
-    ContractMethod.swapOnZeroXv4,
-    // use "as ContractMethod[]" as long as DirectContractMethods doesn't have any methods from ContractMethodV6
-  ] as ContractMethod[]
-).concat(DirectContractMethodsWithFeeModel);
+export const DirectContractMethods = [
+  ContractMethodV5.swapOnUniswap,
+  ContractMethodV5.buyOnUniswap,
+  ContractMethodV5.swapOnUniswapFork,
+  ContractMethodV5.buyOnUniswapFork,
+  ContractMethodV5.swapOnUniswapV2Fork,
+  ContractMethodV5.buyOnUniswapV2Fork,
+  ContractMethodV5.swapOnZeroXv2,
+  ContractMethodV5.swapOnZeroXv4,
+
+  ContractMethodV6.swapExactAmountInOutOnAugustusRFQTryBatchFill,
+  ContractMethodV6.swapExactAmountInOutOnMakerPSM,
+].concat(DirectContractMethodsWithFeeModel);
