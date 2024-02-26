@@ -37,7 +37,7 @@ export type OptionalRate = {
   data?: any;
 };
 
-type BaseRate = {
+export type OptimalRate = {
   blockNumber: number;
   network: number;
   srcToken: Address;
@@ -55,26 +55,16 @@ type BaseRate = {
   others?: OptionalRate[];
   side: SwapSide;
   contractMethod: string;
+  tokenTransferProxy: Address;
+  contractAddress: Address;
   maxImpact?: number;
   maxUSDImpact?: number;
   maxImpactReached?: boolean;
   partner?: string;
   partnerFee: number;
   hmac: string;
+  version: ParaSwapVersion;
 };
-
-export type OptimalRateV5 = BaseRate & {
-  version: ParaSwapVersion.V5;
-  tokenTransferProxy: Address;
-  contractAddress: Address;
-};
-
-export type OptimalRateV6 = BaseRate & {
-  version: ParaSwapVersion.V6;
-  contractAddress: Address;
-};
-
-export type OptimalRate = OptimalRateV5 | OptimalRateV6;
 
 export enum ParaSwapVersion {
   V5 = '5',
