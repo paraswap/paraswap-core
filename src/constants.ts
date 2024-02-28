@@ -57,8 +57,6 @@ export const DirectContractMethodsWithFeeModel: ContractMethod[] = [
   ContractMethodV5.directBalancerV2GivenInSwap,
   ContractMethodV5.directBalancerV2GivenOutSwap,
 
-  ContractMethodV6.swapExactAmountIn,
-  ContractMethodV6.swapExactAmountOut,
   ContractMethodV6.swapExactAmountInOnUniswapV2,
   ContractMethodV6.swapExactAmountOutOnUniswapV2,
   ContractMethodV6.swapExactAmountInOnUniswapV3,
