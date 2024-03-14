@@ -63,4 +63,10 @@ export type OptimalRate = {
   partner?: string;
   partnerFee: number;
   hmac: string;
+  version: ParaSwapVersion;
 };
+
+export enum ParaSwapVersion {
+  V5 = '5',
+  V6 = '6',
+}
