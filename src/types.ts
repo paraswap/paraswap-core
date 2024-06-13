@@ -68,5 +68,5 @@ export type OptimalRate = {
 
 export enum ParaSwapVersion {
   V5 = '5',
-  V6 = '6.1',
+  V6 = '6.2',
 }
