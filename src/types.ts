@@ -43,11 +43,11 @@ export type OptimalRate = {
   srcToken: Address;
   srcDecimals: number;
   srcAmount: NumberAsString;
-  srcUSD: NumberAsString;
+  srcUSD: NumberAsString | null;
   destToken: Address;
   destDecimals: number;
   destAmount: NumberAsString;
-  destUSD: NumberAsString;
+  destUSD: NumberAsString | null;
   bestRoute: OptimalRoute[];
   gasCostUSD: NumberAsString;
   gasCost: NumberAsString;
@@ -68,5 +68,5 @@ export type OptimalRate = {
 
 export enum ParaSwapVersion {
   V5 = '5',
-  V6 = '6',
+  V6 = '6.1',
 }

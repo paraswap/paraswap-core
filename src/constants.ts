@@ -41,7 +41,7 @@ export enum ContractMethodV6 {
   swapExactAmountOutOnBalancerV2 = 'swapExactAmountOutOnBalancerV2',
   swapExactAmountInOnCurveV1 = 'swapExactAmountInOnCurveV1',
   swapExactAmountInOnCurveV2 = 'swapExactAmountInOnCurveV2',
-  swapExactAmountInOutOnAugustusRFQTryBatchFill = 'swapExactAmountInOutOnAugustusRFQTryBatchFill',
+  swapOnAugustusRFQTryBatchFill = 'swapOnAugustusRFQTryBatchFill',
   swapExactAmountInOutOnMakerPSM = 'swapExactAmountInOutOnMakerPSM',
 }
 
@@ -77,6 +77,6 @@ export const DirectContractMethods = [
   ContractMethodV5.swapOnZeroXv2,
   ContractMethodV5.swapOnZeroXv4,
 
-  ContractMethodV6.swapExactAmountInOutOnAugustusRFQTryBatchFill,
+  ContractMethodV6.swapOnAugustusRFQTryBatchFill,
   ContractMethodV6.swapExactAmountInOutOnMakerPSM,
 ].concat(DirectContractMethodsWithFeeModel);
